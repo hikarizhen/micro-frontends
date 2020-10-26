@@ -1,0 +1,9 @@
+[submodule "team-blue"]
+	path = team-blue
+	url = https://github.com/hikarizhen/micro-frontends-team-blue.git
+[submodule "team-red"]
+	path = team-red
+	url = https://github.com/hikarizhen/micro-frontends-team-red.git
+[submodule "team-green"]
+	path = team-green
+	url = https://github.com/hikarizhen/micro-frontends-team-green.git
