@@ -1,0 +1,4 @@
+2020/10/27 15:38:42 [emerg] 7460#4312: CreateFile() "C:\project\micro-frontends/conf/nginx.conf" failed (3: The system cannot find the path specified)
+2020/10/27 15:39:39 [emerg] 20260#13320: "upstream" directive is not allowed here in C:\project\micro-frontends/conf/nginx.conf:1
+2020/10/27 15:40:36 [emerg] 19740#15552: "upstream" directive is not allowed here in C:\project\micro-frontends/conf/nginx.conf:1
+2020/10/27 15:42:21 [emerg] 15468#7736: "upstream" directive is not allowed here in C:\project\micro-frontends/conf/nginx.conf:1
