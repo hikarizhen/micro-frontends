@@ -12,11 +12,6 @@ upstream team_red {
 
 log_format compact '$request $status - $bytes_sent';
 access_log off;
-
-events {
-    worker_connections  1024;
-}
-
 http {
   server {
     listen 3000;
@@ -37,7 +32,7 @@ http {
     }
 
     location /common {
-      root /usr/local/var/www;
+      root C:\project\micro-frontends;
     }
 
     location / {
