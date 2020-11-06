@@ -3,8 +3,8 @@ services:
   nginx:
     image: nginx:1-alpine
     volumes:
-     - ./nginx/nginx.conf:/usr/local/etc/nginx/nginx.conf
-     - ./nginx/common:/usr/local/var/www/common
+     - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+     - ./nginx/common:/usr/share/nginx/html/common
     ports:
      - "3000:3000"
     depends_on:
