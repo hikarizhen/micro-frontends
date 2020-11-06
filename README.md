@@ -1,60 +1,60 @@
-# MicroFrontends�̃R�A�A�C�f�B�A
+# MicroFrontendsのコアアイディア
 
-�E Be Technology Agnostic
+・ Be Technology Agnostic
 
-�@�e�`�[���͋Z�p�ɂ����đ��`�[���̉e�����󂯂܂���B
-�@�e�`�[���́A���̃`�[���ƒ������Ȃ��Ă��A�X�^�b�N��I�����ăA�b�v�O���[�h�ł���K�v������܂��B�J�X�^���v�f�́A���̃��[�U�[�ɒ����I�ȃC���^�[�t�F�C�X��񋟂��Ȃ���A�����̏ڍׂ��B�����߂̗D�ꂽ���@�ł��B
+　各チームは技術において他チームの影響を受けません。
+　各チームは、他のチームと調整しなくても、スタックを選択してアップグレードできる必要があります。カスタム要素は、他のユーザーに中立的なインターフェイスを提供しながら、実装の詳細を隠すための優れた方法です。
 
-�E Isolate Team Code
+・ Isolate Team Code
 
-�Z�p���l�A���ۂ̃R�[�h�����L���܂���B�܂��A��Ԃ�O���[�o���ϐ��A�R�[�f�B���O���[���Ȃǂ��݂��Ɉˑ����Ȃ��悤�Ɨ����ċ@�\�����܂��B
+技術同様、実際のコードも共有しません。また、状態やグローバル変数、コーディングルールなども互いに依存しないよう独立して機能させます。
 
-���ׂẴ`�[���������t���[�����[�N���g�p���Ă���ꍇ�ł��A�����^�C�������L���Ȃ��ł��������B���Ȋ����^�̓Ɨ������A�v�����\�z���܂��B���L��Ԃ܂��̓O���[�o���ϐ��Ɉˑ����Ȃ��ł��������B
+すべてのチームが同じフレームワークを使用している場合でも、ランタイムを共有しないでください。自己完結型の独立したアプリを構築します。共有状態またはグローバル変数に依存しないでください。
 
-�E Establish Team Prefixes
+・ Establish Team Prefixes
 
-�@�`�[���� Prefix ���߂�
-�@�݂��̃R���t���N�g������邽�߁A�`�[���� Prefix ���߂ĊǗ����邱�Ƃ���������Ă��܂��B
+　チームの Prefix を定める
+　互いのコンフリクトを避けるため、チームの Prefix を定めて管理することが推奨されています。
 
-�@���L���𖾊m�ɂ��邽�߂̖��O���CSS�A�C�x���g�A���[�J���X�g���[�W�����Cookie�B
+　所有権を明確にするための名前空間CSS、イベント、ローカルストレージおよびCookie。
 
-�@�{���ɃN���X�`�[��API���\�z����K�v������ꍇ�́A�ł��邾���V���v���ɕۂ悤�ɂ��Ă��������B
+　本当にクロスチームAPIを構築する必要がある場合は、できるだけシンプルに保つようにしてください。
 
-�E Build a Resilient Site�@�񕜗͂�����T�C�g���\�z����B
+・ Build a Resilient Site　回復力があるサイトを構築する。
 
-�@ JavaScript�����s������A�܂����s����Ă��Ȃ��ꍇ�ł��A���̋@�\�͖𗧂͂��ł��B
+　 JavaScriptが失敗したり、まだ実行されていない場合でも、この機能は役立つはずです。
 
-�@�@���ڂ������
-�@�@https://resilientwebdesign.com/
+　　※詳しい情報
+　　https://resilientwebdesign.com/
 
 
-#�@Web�J���̃g�����h
+#　Web開発のトレンド
 
-���݂�Web�̃g�����h�͑��@�\��SPA�ł��B
+現在のWebのトレンドは多機能なSPAです。
 
-SPA�Ƃ�SPA(Single Page Application)�̗��ł��B
+SPAとはSPA(Single Page Application)の略です。
 
-�P���Web�y�[�W�ŃA�v���P�[�V�������\������݌v�\���̖��̂ł��B
+単一のWebページでアプリケーションを構成する設計構造の名称です。
 
-�����F
+特徴：
 
-�E�P���Web�y�[�W�ŃR���e���c�؂�ւ����s��	
+・単一のWebページでコンテンツ切り替えを行う	
 			
-�E�y�[�W�J�ڂ̕K�v���Ȃ��Ȃ�
+・ページ遷移の必要がなくなり
 				
-�E�u���E�U�̋����ɔ����Ȃ�Web�\�����\
+・ブラウザの挙動に縛られないWeb表現を可能
 
 
-#�T���v���@�\�T�v
+# サンプル機能概要
 
-�g���N�^�[�X�g�A�̐��i�y�[�W�ɉ��L�̋@�\������܂��B
+トラクターストアの製品ページに下記の機能があります。
 
-�@3�قȂ�g���N�^�[���f����؂�ւ���B
-�A���i�C���[�W��ύX����ƁA���O�A���i�A�����������X�V����܂��B
-�B�I���������f�����o�X�P�b�g�ɒǉ�����B
-�w���{�^���������ƁA����ɉ����čX�V�����㕔�̃~�j�o�X�P�b�g������܂��B
+①3つ異なるトラクターモデルを切り替える。
+②製品イメージを変更すると、名前、価格、推奨事項が更新されます。
+③選択したモデルをバスケットに追加する。
+購入ボタンを押すと、それに応じて更新される上部のミニバスケットもあります。
 
-#Run Sample
+# Run Sample
 
     docker-compose up --build
 
